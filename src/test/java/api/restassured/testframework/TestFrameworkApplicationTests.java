@@ -1,7 +1,7 @@
 package api.restassured.testframework;
 
+import api.restassured.testframework.testutils.Constants;
 import groovy.util.logging.Slf4j;
-//import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.testng.annotations.Test;
 
@@ -13,7 +13,7 @@ class TestFrameworkApplicationTests {
 
 	@Test
 	void contextLoads() {
-		when().get("https://dummy-json.mock.beeceptor.com/todos")
+		when().get(Constants.GET_USER_API)
 				.then().assertThat().statusCode(200);
 	}
 
